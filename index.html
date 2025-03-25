@@ -1,0 +1,778 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Halaman Judul-->
+    <title>Jumi & Vicco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Charm:wght@400;700&family=Sacramento&family=Tangerine:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Halaman Judul End-->
+
+    <!-- Halaman Utama simplyCountdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+    <script src="countdown/simplyCountdown.min.js"></script>
+
+    <!-- Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Halaman Utama simplyCountdown End-->
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Halaman Depan --><!--Halaman Judul/Utama-->
+    <div id="hero" class="hero">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>THE WEDDING OF</h1>
+        <h2>Jumi & Vicco</h2>
+        <p>
+          Kepada Yth : <br />
+          Bapak /Ibu/Soudara/i, <br /> <span></span>
+        </p>
+        <button class="btn" onclick="enableScroll()">Lihat Undangan</button>
+      </div>
+    </div> 
+
+    
+  
+    <!-- Halaman Dalam -->
+      <section id="content" class="content-hero" style="display: none">
+        <!-- navbar -->
+        <nav id="navbar" class="navbar navbar-expand-md bg-body-tertiary sticky-top" >
+          <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="list active">
+                  <a href="#utama">
+                    <span class="icon">
+                      <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="list">
+                  <a href="#Home">
+                    <span class="icon">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="list">
+                  <a href="#data">
+                    <span class="icon">
+                      <ion-icon name="calendar-clear-outline"></ion-icon>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="list">
+                  <a href="#gallery">
+                    <span class="icon">
+                      <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="list">
+                  <a href="#rsvp">
+                    <span class="icon">
+                      <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    </span>
+                  </a>
+                </li>
+
+                <div class="indicator"><span></span></div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <script>
+          const list = document.querySelectorAll(".collapse .list");
+          function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove("active"));
+            this.classList.add("active");
+          }
+          list.forEach((item) =>
+          item.addEventListener("click", activeLink));
+        </script>
+ 
+        <!--
+        <nav id="navbar" class="navbar navbar-expand-md bg-body-tertiary sticky-top" >
+          <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="list active">
+                  <a href="#utama">
+                    <span class="icon">
+                      <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Utama</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#Home">
+                    <span class="icon">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </span>
+                    <span class="text">Info</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#data">
+                    <span class="icon">
+                      <ion-icon name="calendar-clear-outline"></ion-icon>
+                    </span>
+                    <span class="text">Data</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#gallery">
+                    <span class="icon">
+                      <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                    <span class="text">Gallery</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#rsvp">
+                    <span class="icon">
+                      <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    </span>
+                    <span class="text">RSVP</span>
+                  </a>
+                </li>
+                <div class="indicator"></div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <script>
+          const list = document.querySelectorAll(".list");
+          function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove("active"));
+            this.classList.add("active");
+          }
+          list.forEach((item) =>
+          item.addEventListener("click", activeLink));
+        </script>
+        -->
+       
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        <!-- akhir navbar -->
+        
+        
+
+        <!--Halaman utama-->
+        <div id="utama" class="utama">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <h1>THE WEDDING OF</h1>
+                <div class="col-5">
+                  <img
+                    src="img/Halaman_Dalam.jpg"
+                    alt="pengantin"
+                    class="img-responsive rounded-circle"
+                  />
+                </div>
+                <h2>Jumi & Vicco</h2>
+                <p>We Invite You To Celebrate Our Wedding</p>
+                <p>Minggu, 06 April 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="utama2" class="utama2">
+          <div class="container">
+            <div class="row">
+              <div class="col-8 text-end"></div>
+              <h1>📖</h1>
+              <h2>
+                "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung
+                dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa
+                kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar
+                terdapat tanda-tanda bagi kaum yang berfikir."
+              </h2>
+              <p>(QS. Ar-Rum : 21)</p>
+            </div>
+          </div>
+        </div>
+        <!--Halaman utama END-->
+
+        <!--Halaman Home-->
+        <div id="Home" class="Home">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <h3>﷽</h3>
+                <h4>Assalamualaikum Wr. Wb.</h4>
+                <p>
+                  Tampa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
+                  serta kerabat sekalian untuk menghadiri acara pernikahan kami:
+                </p>
+              </div>
+            </div>
+
+            <div class="couple-profile">
+              <div class="col-lg-6">
+                <div class="row">
+                  <div class="col-5">
+                    <img
+                      src="img/Jumi.jpg"
+                      alt="jumi"
+                      class="img-responsive rounded-circle"
+                    />
+                  </div>
+                  <div class="col-7 text-end">
+                    <h6>Jumiarti Ningsih .S.M</h6>
+                    <p>
+                      Putri Pertama Dari <br />
+                      Bapak Asmaun Dan Ibu Sumiyati
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="saya">
+                <div class="row">
+                  <div class="col-7 text-end">
+                    <p>&</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="vicco" class="col-lg-6">
+                <div class="row">
+                  <div class="col-5">
+                    <img
+                      src="img/Vicco.jpg"
+                      alt="vicco"
+                      class="img-responsive rounded-circle"
+                    />
+                  </div>
+                  <div class="col-7">
+                    <h6>Vicco Dima Saputra .S.IP</h6>
+                    <p>
+                      Putra Pertama Dari <br />
+                      Bapak Ali Sadikin Dan Ibu Ima
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Halaman Story-->
+            <div class="love-story">
+              <div class="col-md-8 text-center">
+                <p>LOVE STORY</p>
+                <div class="col-5">
+                  <img
+                    src="img/ANP_6317.jpg"
+                    alt="story"
+                    class="img-responsive rounded-circle"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <ul class="timeline">
+                <!--Awal Pertemuan-->
+                <li>
+                  <div
+                    class="timeline-image"
+                    style="background-image: url(img/Awal\ Pertemuan.jpg)"
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3>Awal Pertemuan</h3>
+                      <span>22 Agustus 2016</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Tidak ada yang kebetulan di dunia ini, semua sudah tersusun rapi oleh Allah SWT, kita tidak bisa memilih kepada siapa kita akan jatu cinta, kami bertemu ditahun 2016, ketika awal kami masuk duduk dibangku SMA tidak ada yang menyangka jika pertemuan itu akan membawa kita pada sebuah ikatan.</p>
+                    </div>
+                  </div>
+                </li>
+                <!--Lamaran-->
+                <li class="timeline-inverted">
+                  <div
+                    class="timeline-image"
+                    style="background-image: url(img/Lamaran.jpg)"
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3>Lamaran</h3>
+                      <span>05 Februari 2025</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Semakin lama kami semakin merasa saling melengkapi satu sama lain dan merasakan bahwa ada kecocokan untuk bersama serta menjadi teman hidup baik suka dan duka. Sesuai dengan keinginan kami berdua, kami telah memutuskan untuk melanjutkan hubungan ke jenjang yang lebih serius yang disaksikan ileh kedua belah pihak keluarga.</p>
+                    </div>
+                  </div>
+                </li>
+                <!--Menikah-->
+                <li>
+                  <div
+                    class="timeline-image"
+                    style="background-image: url(img/Pernikahan.jpeg)"
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="heading">
+                      <h3>Menikah</h3>
+                      <span>06 April 2025</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Percayalah, bukan karna bertemu lalu berjodoh tetapi karena berjodohlah maka kami dipertemukan, kami memutuskan untuk mengikrarkan janji suci pernikahan kami di tahun 2025 ini. InsyaAllah penuh berkah. Sebagaiman yang pernah dikatakan oleh Sayyidina Ali Bin Abi Thalib "Apapun yang menjadi takdirmu akan mencari jalannya menemukanmu".</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--Halaman Story END-->
+        <!--Halaman Home END-->
+
+        <!-- Data Pernikahan -->
+        <!-- Konten Undangan -->
+
+        <div id="data" class="data">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-10 text-center">
+                <h1>Save The Date</h1>
+                <h2>Dan Kami bersyukur, dipertemukan ALLAH SWT diwaktu</h2>
+                <div class="simply-countdown"></div>
+                <div class="overlayq"></div>
+                
+                
+                <div>
+                  <div class="data-panel">
+                    <img src="img/ANP_62652.png" alt="Pasangan" class="couple-image fade-in">
+                    <div class="data-heading">
+                      <h3>Akad Nikah</h3>
+                      <span>Minggu, 06 April 2025</span>
+                    </div>
+                    <div class="data-body">
+                      <p>Pukul 08.00 - Selesai <br />Bertempat di<br />Kediaman Ibu Sumiyati<br /> RT. 03, Desa Benua Baru<br />Kec. Muara Bengkal
+                      </p>
+                    </div>
+                    <p>💕————❤️————💕</p>
+                    <div class="data-heading">
+                      <h3>Resepsi</h3>
+                      <span>Minggu, 06 April 2025</span>
+                    </div>
+                    <div class="data-body">
+                      <p>Pukul 10.00 - 15.00 WITA <br />Bertempat di<br />Lapangan Bola Benua Baru<br /> RT. 03, Desa Benua Baru<br />Kec. Muara Bengkal
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeri Foto Pernikahan -->
+        <div id="gallery" class="gallery">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-10 text-center">
+                <span>Memori Cerita Kami</span>
+                <p>Gallery Foto</p>
+              </div>
+            </div>
+
+            <!--Foto-->
+            <div class="row row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-2 justify-content-center">
+              <div class="col mt-3">
+                  <img src="img/gallery/thumbnail/1.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+
+                  <img src="img/gallery/thumbnail/2.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+                
+              
+                
+                  <img src="img/gallery/thumbnail/3.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+                
+              
+                
+                  <img src="img/gallery/thumbnail/4.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+              
+
+                
+                  <img src="img/gallery/thumbnail/5.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+              
+                  <img src="img/gallery/thumbnail/6.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+                
+                  <img src="img/gallery/thumbnail/7.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+                
+                  <img src="img/gallery/thumbnail/8.jpg" 
+                  alt="Jumi & Vicco 1" 
+                  class="img-fluid w-100 rounded">
+                
+              </div>
+            </div>
+          </div>
+
+          <!--Hakaman GIFTS-->
+          <div id="gifts" class="gifts">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center">
+                  <span>Ungkapan Tanda Kasih</span>
+                  <p>Kirim Hadiah</p>
+                </div>
+              </div>
+
+              <div class="atm1">
+                <img
+                    src="img/ATM/4.jpg"
+                    alt="pengantin"
+                    class="img-responsive rounded-circle"
+                  />
+                <div class="text-container">
+                  <h1>1307055828</h1>
+              </div>
+              <button class="tombol" onclick="copyText()">Copy</button>
+              <div class="text-container1">
+                <h1>JUMIARTI NINGSIH</h1>
+            </div></div>
+
+              <div class="atm1">
+                <img
+                    src="img/ATM/2.jpg"
+                    alt="pengantin"
+                    class="img-responsive rounded-circle"
+                  />
+                  <div class="text-container2">
+                    <h1>4585 01 006464 50 1</h1>
+                </div>
+                <button class="tombol" onclick="copyText2()">Copy</button>
+                <div class="text-container3">
+                  <h1>VICCO DIMA SAPUTRA</h1>
+              </div></div>
+
+              <div class="atm1">
+                <img
+                    src="img/ATM/8.jpg"
+                    alt="pengantin"
+                    class="img-responsive rounded-circle"
+                  />
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--Hakaman GIFTS END-->
+
+
+        <!--Hakaman RSVP-->
+        <div id="rsvp" class="rsvp">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-10 text-center">
+                <h2>Konfirmasi Kehadiran</h2>
+                <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+              </div>
+            </div>
+
+            <form class="row row-cols-lg-auto g-3 align-items-center"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbyrNhHdlercSDf-hnt4dHx4y3oYLi1y3Lh1NwmdRbMgbEtYrYMA69gnYArvZTt7ih6_vQ/exec" id="my-form">
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="nama" name="nama">
+                </div>
+              </div>
+
+              <div class="col-12" style="margin-top: 10px;">
+                <div class="mb-3">
+                  <label for="jumlah" class="form-label">Jumlah</label>
+                  <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="10" langth="1" value="1">
+
+                </div>
+              </div>
+
+              <div class="col-12" style="margin-top: 10px;">
+                <div class="mb-3">
+                  <label for="status" class="form-label">Konfirmasi</label>
+                  <select name="status" id="status" class="form-select">
+                    <option selected>Pilih Salah Satu</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                  </select> 
+                </div>
+              </div>
+
+              <div class="col-12" style="margin-top: 30px;">
+                <button class="btn btn-primary">Kirim</button>
+              </div>
+            </form>
+
+            <div class="row justify-content-center mt-5" style="position: relative; margin-left: 5rem; margin-right: 5rem; top: 2rem; font-size: 0.5rem;">
+              <div class="col-md-6 text-center">
+                <div id="disqus_thread"></div>
+                  <script>
+                      /**
+                      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                      /*
+                      var disqus_config = function () {
+                      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                      };
+                      */
+                      (function() { // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+                      s.src = 'https://surat-undangan.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                      })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Hakaman RSVP END-->
+
+          <!-- Halaman Penutup -->
+          <div id="penutup" class="penutup">
+            <div class="container">
+              <div class="overlayi"></div>
+              <div class="content">
+                <h1>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</h1>
+                <h2>Walaikumsalam Wr. Wb.</h2>
+                <p>Jumi & Vicco</p>
+              </div>
+            </div>
+          </div>
+
+          
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col text-center">
+                <small class="block"
+                  >&copy; 2025 Surat Undangan. All Rights Reserved.</small
+                >
+                <small class="block"
+                  >Design by
+                  <a href="https://instagram.com/nurhidayat2660">@nurhidayat2660</a></small
+                >
+
+                <ul class="mt-3">
+                  <li>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <!--Musik-->
+      <div id="audio-container">
+        <audio id="song" autoplay loop>
+          <source src="audio/musikpernikahan.m4a" type="audio/mp3" />
+        </audio>
+
+        <div id="audioIconWrapper" class="audio-icon-wrapper" onclick="toggleMusic()">
+          <i id="musicIcon" class="bi bi-disc"></i>
+        </div>
+        <!--
+        <div class="audio-icon-wrapper" >
+          <i id="musicIcon" class="bi bi-pause-circle"></i>
+        </div>
+      </div>
+    -->
+    <!--CSS & JAVA-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    
+
+    <!--Halaman Judul Waktu-->
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2025, // required
+        month: 4, // required
+        day: 6, // required
+        hours: 8, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+      });
+    </script>
+    <!--Halaman Judul Waktu End-->
+
+    
+    <!-- Script Animasi Halaman Depan ke Halaman Dalam -->
+    <script>
+        let isMusicPlaying = false; // Status musik
+
+        function enableScroll() {
+            const hero = document.getElementById("hero");
+            const content = document.getElementById("content");
+            const music = document.getElementById("song");
+            const audioWrapper = document.getElementById("audioIconWrapper");
+
+            hero.style.transition = "transform 1s ease-in-out, opacity 0.5s";
+            hero.style.transform = "translateY(-100%)";
+            hero.style.opacity = "0";
+
+            setTimeout(() => {
+                hero.style.display = "none";
+                content.style.display = "block";
+                setTimeout(() => {
+                    content.style.opacity = "1";
+                }, 100);
+
+                // Tampilkan ikon musik
+                audioWrapper.style.display = "flex";
+
+                // Coba putar musik setelah interaksi
+                playMusic();
+            }, 1000);
+        }
+
+        function playMusic() {
+            const music = document.getElementById("song");
+            const musicIcon = document.getElementById("musicIcon");
+            const audioWrapper = document.getElementById("audioIconWrapper");
+
+            if (!isMusicPlaying) {
+                music.play().then(() => {
+                    isMusicPlaying = true;
+                    sessionStorage.setItem("musicPlayed", "true");
+                    musicIcon.classList.replace("bi-pause-circle", "bi-disc"); // Ganti ikon ke Play
+                    audioWrapper.classList.add("rotating"); // Tambah efek rotasi
+                }).catch(error => console.log("Autoplay gagal:", error));
+            }
+        }
+
+        // Toggle Musik (Play/Pause)
+        function toggleMusic() {
+            const music = document.getElementById("song");
+            const musicIcon = document.getElementById("musicIcon");
+            const audioWrapper = document.getElementById("audioIconWrapper");
+
+            if (music.paused) {
+                music.play();
+                isMusicPlaying = true;
+                musicIcon.classList.replace("bi-pause-circle", "bi-disc"); // Ubah ke ikon Play
+                audioWrapper.classList.add("rotating"); // Aktifkan efek rotasi
+            } else {
+                music.pause();
+                isMusicPlaying = false;
+                musicIcon.classList.replace("bi-disc", "bi-pause-circle"); // Ubah ke ikon Pause
+                audioWrapper.classList.remove("rotating"); // Hentikan efek rotasi
+            }
+        }
+
+        // Reset Musik jika halaman di-refresh
+        document.addEventListener("DOMContentLoaded", function () {
+            if (sessionStorage.getItem("musicPlayed") === "true") {
+                sessionStorage.removeItem("musicPlayed");
+                document.getElementById("hero").style.display = "flex";
+                document.getElementById("content").style.display = "none";
+                document.getElementById("song").pause();
+                document.getElementById("audioIconWrapper").style.display = "none";
+                isMusicPlaying = false;
+                document.getElementById("musicIcon").classList.replace("bi-disc", "bi-pause-circle"); // Pastikan ikon kembali ke Pause
+                document.getElementById("audioIconWrapper").classList.remove("rotating"); // Pastikan rotasi mati
+            }
+        });
+    </script>
+    <!-- Script Animasi Halaman Depan ke Halaman Dalam END-->
+
+    <!--Halaman Kehahadiran-->
+    <script>
+    window.addEventListener("load", function() {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          alert("Komfirmasih Kehadiran Berhasil Terkirim!");
+        })
+      });
+    });
+    </script>
+    <!--Halaman Kehahadiran END-->
+
+    <script>
+      function copyText() {
+
+          /* Copy text into clipboard */
+          navigator.clipboard.writeText
+              ("1307055828");
+      }
+    </script>
+
+    <script>
+      function copyText2() {
+
+          /* Copy text into clipboard */
+          navigator.clipboard.writeText
+              ("4585 01 006464 50 1");
+      }
+    </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama =urlParams.get("N");
+
+      const namaContainer = document.querySelector(".hero p span");
+      namaContainer.innerText = nama;
+    </script>
+
+  </body>
+</html>
