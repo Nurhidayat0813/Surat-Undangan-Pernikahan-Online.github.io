@@ -23,8 +23,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-image: url(img/ANP_6262_1.jpg);
   background-size: cover;
   transition: transform 1s ease-in-out, opacity 0.5s;
@@ -102,8 +102,8 @@ body {
 .overlay {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 1) 0%,
