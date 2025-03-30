@@ -327,7 +327,7 @@
                       <span>05 Februari 2025</span>
                     </div>
                     <div class="timeline-body">
-                      <p>Semakin lama kami semakin merasa saling melengkapi satu sama lain dan merasakan bahwa ada kecocokan untuk bersama serta menjadi teman hidup baik suka dan duka. Sesuai dengan keinginan kami berdua, kami telah memutuskan untuk melanjutkan hubungan ke jenjang yang lebih serius yang disaksikan ileh kedua belah pihak keluarga.</p>
+                      <p>Semakin lama kami semakin merasa saling melengkapi satu sama lain dan merasakan bahwa ada kecocokan untuk bersama serta menjadi teman hidup baik suka dan duka. Sesuai dengan keinginan kami berdua, kami telah memutuskan untuk melanjutkan hubungan ke jenjang yang lebih serius yang disaksikan oleh kedua belah pihak keluarga.</p>
                     </div>
                   </div>
                 </li>
@@ -364,6 +364,17 @@
                 <h1>Save The Date</h1>
                 <h2>Dan Kami bersyukur, dipertemukan ALLAH SWT diwaktu</h2>
                 <div class="simply-countdown"></div>
+                <!-- Tombol "Lihat Produk" -->
+                <button class="product-button" onclick="openPopup()">Kelik Lihat Peta Lokasi</button>
+
+                <!-- Popup -->
+                <div class="popup" id="popup">
+                  <div class="popup-content">
+                    <button class="close-btn" onclick="closePopup()">X</button>
+                    <img src="img/Peta Acara.jpg" alt="Produk">
+                  </div>
+                </div>
+
                 <div class="overlayq"></div>
                 
                 
@@ -553,7 +564,7 @@
                       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
                       /*
                       var disqus_config = function () {
-                      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.url = PAGE_https://nurhidayat0813.github.io/Surat-Undangan-Pernikahan-Online.github.io/;  // Replace PAGE_https://nurhidayat0813.github.io/Surat-Undangan-Pernikahan-Online.github.io/ with your page's canonical https://nurhidayat0813.github.io/Surat-Undangan-Pernikahan-Online.github.io/ variable
                       this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                       };
                       */
@@ -772,6 +783,17 @@
 
       const namaContainer = document.querySelector(".hero p span");
       namaContainer.innerText = nama;
+    </script>
+
+    <!--Tombol peta data-->
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
     </script>
 
   </body>
