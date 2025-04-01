@@ -1124,7 +1124,7 @@ footer li {
   }
 }
 /* Laptop */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   html {
     font-size: 75%;
   }
@@ -1281,7 +1281,7 @@ footer li {
 }
 
 /* mobile phone */
-@media (max-width: 577px) {
+@media (max-width: 768px) {
   .utama img {
     height: auto;
     position: relative;
